@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMark</title>
+    <link rel="shortcut icon" href="./ASSETS/IMG/favicon-32x32.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrao ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="./ASSETS/CSS/style.css">
+    <script defer type="module" src="./ASSETS/JS/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img width="150px" src="./ASSETS/IMG/cinemark.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-center justify-content-center">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Ofertas</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="./ASSETS/IMG/banne1.png" class="d-block w-100" alt="banner">
+            </div>
+            <div class="carousel-item">
+            <img src="./ASSETS/IMG/banner2.png" class="d-block w-100" alt="banner">
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="row p-4 gap-3 justify-content-center" id="listaPeliculas">
+        </div>
+    </section>
+
+
+
+    <div id="reserva" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Reserva de Entradas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="pago" action="#">
+                    <label for="#pelicula">Pelicula</label>
+                    <input class="form-control" type="text" id="pelicula" disabled>
+
+                    <label for="#horario">Horario</label>
+                    <select class="form-control" id="horario" required>
+                        <option value="none" selected disabled>Selecciona una hora</option>
+                        <option value="13:45">13:45</option>
+                        <option value="15:30">15:30</option>
+                        <option value="18:50">18:50</option>
+                        <option value="21:00">21:00</option>
+                    </select>
+
+                    <label for="#asientos">Cantidad de Asientos</label>
+                    <input class="form-control" type="number" min="0" max="48" value="1" id="asientos" required>
+                    <hr>
+                    <h5>Metodo de Pago</h5>
+
+                    <label for="#tarjeta">Numero tarjeta</label>
+                    <input class="form-control" type="text" id="tarjeta" placeholder="**** **** **** 1234" required>
+
+                    <label for="#titular">Nombre del titular</label>
+                    <input class="form-control" type="text" id="titular" required>
+
+                    <label for="#cvv">CVV</label>
+                    <input class="form-control" type="number" min="1" id="cvv" placeholder="***" required>
+
+                    <label id="total">Total: 5990</label>
+                    <div class="modal-footer">
+                        <input id="submit" class="btn btn-primary" value="Comprar" type="submit">
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmacion" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="confirmLabel"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="body-confirm" class="modal-body">
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

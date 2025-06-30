@@ -1,0 +1,61 @@
+body {
+    background-color: #212121;
+}
+
+#listaPeliculas {
+    height: 60dvh;
+}
+
+.modal-header {
+    background: linear-gradient(70deg,rgb(221, 5, 5), rgb(255, 113, 113));
+    color: #fff;
+}
+
+.modal-body h5{
+    font-weight: 700;
+}
+.modal-body label {
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card img{
+    width: 285px;
+    height: 420px;
+}
+.card h5 {
+    text-align: center;
+}
+.card p {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.card button {
+    position: absolute;
+    left: 84px;
+    bottom: 10px;
+    padding: 5px 30px;
+    background-color: #ea2121;
+    border: none;
+}
+
+input[type=submit] {
+    background-color: #ea2121;
+    border: none;
+}
+
+hr {
+    margin: 30px 0px;
+    border: 0;           
+    border-top: 4px solid #ea2121; 
+}
+
+
